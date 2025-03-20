@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Task 3</title>
+        <script>
+            function date()
+            {
+                obj = JSON.parse(`{"DOB":"1990-08-24"}`);
+                obj = new Date(obj.DOB);
+                document.getElementById("demo").innerHTML = obj;
+            }
+        </script>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <button onclick="date()">Click Me</button>
+    </body>
+</html>

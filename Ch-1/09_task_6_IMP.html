@@ -1,0 +1,21 @@
+<!--  write a function "firstlast" that takes an array and returns an object with below condition
+    1.) first elemnet of an array must be object's key.
+    2.) lasdt element of an array must be key's value.  -->
+
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <script>
+            var arr = ["abc","def","hij","lmn"];
+            function FirstLast(a)
+            {
+                var temp ={}
+                temp[a[0]] = a[a.length-1];
+                return temp;
+            }
+            console.log(FirstLast(arr))
+        </script>
+    </body>
+</html>
