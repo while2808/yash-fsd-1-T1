@@ -1,0 +1,18 @@
+<!-- Callback : function inside function call.
+    1.)setTimeOut(function abc(){},2000 ms);
+    2.)setInterval(function abc(){},3000 ms);
+-->
+
+<!-- Display content on browser after 5 seconds -->
+
+<html>
+    <body>
+        <p id="p1"></p>
+        <script>
+            setTimeout(myfun, 5000); // Pass the function reference, not call it
+            function myfun() {
+                document.getElementById("p1").innerHTML = "Hello World!";
+            }
+        </script>
+    </body>
+</html>
