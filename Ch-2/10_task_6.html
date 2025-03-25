@@ -1,0 +1,42 @@
+<!-- 3 button increment,decre,stop and size 200px stop ,decrese min 20px and operate of stop. -->
+
+<html>
+    <body>
+        <p id="p1">Yash Goyani</p>
+        <button onclick="increment()">Increase Size</button>
+        <button onclick="decrement()">Decrease Size</button>
+        <button onclick="stop()" style="color: white; background-color: red; border-radius: 5px; border-color: red;">Stop</button>
+    </body>
+    <script>
+        font = 16;
+        let myInterval = null;
+
+        function increment(){
+            if (myInterval) {
+                stop();
+            }
+            myInterval=setInterval(function(){
+                if(font<=100){
+                    font++;
+                    document.getElementById("p1").style.fontSize = font;
+                }
+            },50)
+        }
+
+        function decrement(){
+            if (myInterval) {
+                stop();
+            }
+            myInterval=setInterval(function(){
+                if(font>=20){
+                    font--;
+                    document.getElementById("p1").style.fontSize = font;
+                }
+            },50)
+        }
+
+        function stop(){
+            clearInterval(myInterval)
+        }
+    </script>
+</html>

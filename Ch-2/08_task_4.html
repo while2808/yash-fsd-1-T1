@@ -1,0 +1,24 @@
+<!-- Increase Font Size at an interval of 1000ms & it should stop when 50px.
+ when you click on increase button. -->
+<html>
+    <body>
+        <p id="p1">Yash Goyani</p>
+        <button onclick="f2()">Increase Font</button>
+
+        <script>
+            font = 16;
+            function fun(font)
+            {
+                document.getElementById("p1").style.fontSize = font; 
+            }
+            function f2()
+            {
+                setInterval(function(){
+                    if(font<=50){
+                        fun(font++);
+                    }
+                },1000)
+            }
+        </script>
+    </body>
+</html>
